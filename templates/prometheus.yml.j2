@@ -82,7 +82,7 @@ scrape_configs:
     metrics_path: /metrics
     scheme: http
     static_configs:
-      - targets: ['localhost:8002']
+      - targets: ['host.docker.internal:8002']
 
 {% if pihole_enable %}
   - job_name: '{{ pihole_hostname }}'
